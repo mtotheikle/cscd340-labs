@@ -18,6 +18,12 @@ void * runner(void * tid)
 
 int main(int argsc, char **argv)
 {	
+	if (argsc != 3) {
+		printf("Please enter 2 arguments\n");
+	
+		exit(0);
+	}
+	
 	int size = atoi(argv[1]);
 	pthread_t tids[size];
 	pthread_attr_t attr[size];
