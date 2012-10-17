@@ -10,6 +10,12 @@ void * sayHello(void * tid)
 
 int main(int argc, char ** argv)
 {
+	if (argc != 2) {
+		printf("Please enter an arguement for how many threads to create\n");
+		
+		exit(0);
+	}
+	
 	int size = atoi(argv[1]);
 	pthread_t tids[size];
 	int status, x;
